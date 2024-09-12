@@ -6,9 +6,8 @@ This project is dedicated to demonstrating the implementation and usage of vario
 ## Patterns Covered
 - Singleton Pattern
 - Factory Method
-- Abstract Factory
 - Builder Pattern
-- Prototype Pattern
+
 
 ### Dependencies Used
 - Selenium-Java V4.24.0
