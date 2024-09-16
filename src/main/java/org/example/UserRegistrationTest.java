@@ -29,6 +29,7 @@ public class UserRegistrationTest {
         driver.findElement(By.id("job-title")).sendKeys(user.getJobTitle());
         driver.findElement(By.id("radio-button-3")).click();
         driver.findElement(By.id("checkbox-2")).click();
+        driver.findElement(By.xpath("//select[@id='select-menu']//option[@value=3]")).click();
         driver.findElement(By.id("datepicker")).sendKeys(user.getDate());
         driver.findElement(By.cssSelector(".btn.btn-lg.btn-primary")).click();
 
