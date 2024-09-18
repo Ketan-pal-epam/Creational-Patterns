@@ -1,16 +1,34 @@
-package org.example;
+package testing;
 
 
-import org.junit.Test;
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 
 public class UserRegistrationTest {
-    @Test
-    public void testRegisteration() {
-        WebDriver driver = BrowserFactory.getInstance().getDriver();
+    private WebDriver driver;
+
+    @BeforeMethod
+    @Parameters("browser")
+    public void setUp(String browser){
+//        BrowserFactory bf = new BrowserFactory();
+        driver = BrowserFactory.getDriver(browser);
         driver.get("https://formy-project.herokuapp.com/form");
+    }
+
+    @AfterMethod
+    public void tearDown(){
+        BrowserFactory.closeDriver();
+    }
+
+    @Test
+    public void RegistrationTest() {
 
         User user = new UserBuilder()
                 .setFirstName("John")
@@ -36,4 +54,5 @@ public class UserRegistrationTest {
         // Close the browser
         //driver.quit();
     }
+
 }

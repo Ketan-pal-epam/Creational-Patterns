@@ -1,4 +1,4 @@
-package org.example;
+package testing;
 
 public class User {
     private String firstName;

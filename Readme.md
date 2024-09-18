@@ -2,6 +2,11 @@
 ## Task Implement a Test User Builder for User Registration Test SUT - https://formy-project.herokuapp.com/form
 ## Introduction
 This project is dedicated to demonstrating the implementation and usage of various Creational Design Patterns in software development. Creational patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code.
+## Running Project
+- clone repository
+- open in IDE Intellij IDEA
+- Run using TestNG.xml
+
 
 ## Patterns Covered
 - Singleton Pattern
